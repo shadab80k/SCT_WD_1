@@ -21,44 +21,104 @@ Follow these steps:
 git clone <YOUR_GIT_URL>
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# SCT Web Design — Vite + React + shadcn-ui
 
-# Step 3: Install the necessary dependencies.
-npm i
+Professional single-page marketing site built with Vite, React, TypeScript and shadcn-ui components.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+**Quick summary**
+
+- **Stack:** Vite, React, TypeScript, Tailwind CSS, shadcn-ui (Radix + utility components)
+- **Features:** Responsive layout, theme toggle, reusable UI primitives, accessible components
+
+**Repository layout (important paths)**
+
+- `src/` — application source
+- `src/components/` — page sections and reusable components
+- `src/components/ui/` — low-level UI primitives (shadcn-inspired)
+- `src/pages/` — top-level routes (`Index.tsx`, `NotFound.tsx`)
+- `public/` — static assets
+
+## Requirements
+
+- Node.js (18+ recommended)
+- npm or a compatible package manager
+
+## Local setup
+
+1. Clone the repository:
+
+```bash
+git clone <YOUR_GIT_URL>
+cd SCT_WD_1-main
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The site will be available at the address shown by Vite (usually `http://localhost:5173`).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Available scripts
 
-**Use GitHub Codespaces**
+- **`npm run dev`**: Start the Vite dev server
+- **`npm run build`**: Build a production bundle
+- **`npm run build:dev`**: Build with development mode
+- **`npm run preview`**: Preview the production build locally
+- **`npm run lint`**: Run ESLint over the project
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+These scripts are defined in `package.json`.
 
-## What technologies are used for this project?
+## Build & deployment
 
-This project is built with:
+1. Build the app:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+npm run build
+```
 
-## How can I deploy this project?
+2. Preview locally (optional):
 
-You can deploy this project using various hosting platforms such as:
+```bash
+npm run preview
+```
 
-- Vercel
-- Netlify
-- GitHub Pages
-- Or any other static hosting service
+3. Deploy the generated `dist/` folder to your static host (Vercel, Netlify, GitHub Pages, Cloudflare Pages, etc.). Vercel works with zero-config for Vite projects.
+
+## Code structure & conventions
+
+- Components are implemented in `src/components/` and split into page sections (e.g., `HeroSection`, `AboutSection`, `ServicesSection`) and UI primitives in `src/components/ui/`.
+- Tailwind CSS is used for styling; configuration is in `tailwind.config.ts`.
+- Routes are defined using React Router in the `src/pages/` folder.
+
+## Contributing
+
+- Create a feature branch from `main`.
+- Open a clear PR with description and screenshots if applicable.
+- Run `npm run lint` and ensure no ESLint errors before requesting review.
+
+## Troubleshooting
+
+- If the dev server fails to start, ensure Node.js and npm are up to date and reinstall dependencies (`rm -rf node_modules && npm install`).
+- For Tailwind-related styling issues, check `tailwind.config.ts` and ensure PostCSS is installed.
+
+## License & Contact
+
+Specify the license for the project here (e.g., MIT) and provide a contact or maintainer email.
+
+---
+
+If you want, I can:
+
+- add a short project description and logo to the top of the README
+- add CI / GitHub Actions workflow for linting + builds
+- create a `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md`
+
+File updated: `README.md`
