@@ -1,6 +1,6 @@
 # SCT_WD_1
 
-This repository contains tasks and projects completed as part of the SkillCraft Technology Web Development internship (Level 1). It showcases core web development concepts and hands-on implementations using modern web technologies.
+This repository contains tasks and projects completed as part of the SkillCraft Technology Web Development (Level 1). It showcases core web development concepts and hands-on implementations using modern web technologies.
 
 ## Tech Stack
 
